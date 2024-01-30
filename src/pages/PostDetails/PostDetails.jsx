@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 const PostDetails = () => {
 
+    
     const [post, setPost] = useState({})
     const { id } = useParams()
 
@@ -13,7 +14,7 @@ const PostDetails = () => {
         }).then((data) => {
             setPost(data)
         })
-    }, [])
+    }, [id])
 
 
     return (
